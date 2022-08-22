@@ -25,12 +25,9 @@ let renderContacts = function() {
     elNewTelephone.textContent = `${contactsList[i].telephone}`;
     elNewTelephone.setAttribute("href", `tel:${contactsList[i].telephone}`);
 
-    let deleteBtn = document.createElement("span");
-    deleteBtn.style.imageRendering = "https://cdn-icons-png.flaticon.com/512/484/484611.png";
-
     let elItem = document.createElement("li");
     elItem.className = "list-group-item w-75 my-1 rounded-2";
-    elItem.append(elNewFullname, elNewRelationShip, elNewTelephone, deleteBtn);
+    elItem.append(elNewFullname, elNewRelationShip, elNewTelephone);
     elContactList.appendChild(elItem);
   }
 }
@@ -42,13 +39,6 @@ elContactForm.addEventListener("submit", function(evt) {
   let contactSurname = elContactSurname.value.trim();
   let contactRelationship = elContactRelationship.value.trim();
   let contactTelephone = elContactTelephone.value.trim();
-
-  // contactsList.push({
-  //   name: contactName,
-  //   surname: contactSurname,
-  //   relationship: contactRelationship,
-  //   telephone: contactTelephone,
-  // })
 
   let contactPerson = {
     name: contactName,
