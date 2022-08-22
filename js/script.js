@@ -50,4 +50,10 @@ elContactForm.addEventListener("submit", function(evt) {
   contactsList.push(contactPerson);
 
   renderContacts();
+
+  elContactName.value = "";
+  elContactSurname.value = "";
+  elContactRelationship.value = "";
+  elContactTelephone.value = "";
+
 })
