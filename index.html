@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacts</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <main>
+    <div class="container p-2 bg-border text-decoration-none">
+      <h1 class="my-3 h3 text-center">Kontaktlar ro'yxati</h1>
+
+      <div class="row bg-light p-5 border-animation">
+        <div class="col-6">
+          <form class="js-contact-form" method="POST" autocomplete="on">
+            <div class="mb-3 w-75">
+              <label class="form-label" for="contact-name">Ismingizni yozing</label>
+              <input class="form-control js-contact-name" type="text" id="contact-name" name="name"  pattern="[A-Za-z]{0-9}" required>
+              <div class="form-text" id="contact-name">Iltimos, ismingizni kiriting.</div>
+            </div>
+
+            <div class="mb-3 w-75">
+              <label class="form-label" for="contact-surname">Familiyangizni yozing</label>
+              <input class="form-control js-contact-surname" type="text" id="contact-surname" name="surname" required>
+              <div class="form-text" id="contact-surname">Iltimos, familiyangizni kiriting.</div>
+            </div>
+
+            <div class="mb-3 w-75">
+              <label class="form-label" for="contact-relationship">Kimligingizni yozing</label>
+              <input class="form-control js-contact-relationship" type="text" id="contact-relationship"
+                name="relationship" required>
+              <div class="form-text" id="contact-relationship">Iltimos, kimligingizni kiriting.</div>
+            </div>
+
+            <div class="mb-3 w-75">
+              <label class="form-label" for="contact-telephone">Telefon raqamingizni yozing</label>
+              <input class="form-control js-contact-telephone" type="tel" id="contact-telephone" name="telephone"
+                required>
+              <div class="form-text" id="contact-telephone">Iltimos, telefon raqamingizni kiriting.</div>
+            </div>
+
+            <button class="btn btn-primary w-75" type="submit">Qo'shish</button>
+          </form>
+        </div>
+
+        <div class="col-6">
+          <ul class="list-group mt-4 js-contacts-list list-unstyled">
+            <!-- <li class="list-group-item w-75">
+              <p class="fw-bold m-0"><span>Alisher</span> <span>Tojiyev</span></p>
+              <p class="small m-0">qarindosh</p>
+              <a href="tel:+998991234567">+998991234567</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./js/utilities.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
